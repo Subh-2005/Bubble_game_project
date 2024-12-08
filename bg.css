@@ -24,10 +24,9 @@ html,body{
     border-radius: 10px;
 }
 #ptop{
-    padding: 0px 30%;
-    align-items: center;
-
+    padding: 0px 5%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: antiquewhite;
     width: 100%;
@@ -41,25 +40,25 @@ html,body{
     border-radius: 5px;
     color: rgb(121, 68, 9);
      font-weight: 600;
-     font-size: 25px;
+     font-size: 1.5rem;
     
 }
 .elem{
 width: 10%;
 display: flex ;
 align-items: center;
-gap: 10px;
+gap: 5px;
 }
 #pbtm{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 50px;
+    font-size: 2rem;
     gap: 10px;
     width:100%;
     height: calc(100%-100px);
-    padding: 0px 0px 0px 5px;
+    padding: 5px;
 }
 .bubble{
     width:60px;
@@ -67,13 +66,46 @@ gap: 10px;
     background-color: rgb(41, 41, 219);
     border-radius: 45%;
     color: aqua;
-    font-size: 21px;
+    font-size: 1rem;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+/*     flex-wrap: wrap;
+ */    align-items: center;
     justify-content: center;
 }
 .bubble:hover{
     cursor: pointer;
     background-color: rgb(155, 114, 68);
+}
+@media (max-width: 1024px) {
+    #panel {
+        width: 90%;
+        height: 85%;
+    }
+    #ptop {
+        flex-direction: column; /* Stack elements */
+        height: auto;
+    }
+    .box {
+        font-size: 1.2rem; /* Adjust text size for tablets */
+        padding: 5px 10px;
+    }
+    .bubble {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #panel {
+        width: 95%;
+        height: 90%;
+    }
+    .box {
+        font-size: 1rem;
+    }
+    .bubble {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
 }
